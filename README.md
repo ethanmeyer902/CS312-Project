@@ -1,1 +1,64 @@
 # CS312-Project
+1. Start the Backend First
+
+Before doing anything on the frontend, the backend server must be running.
+
+In VS Code:
+
+cd backend
+node server.js
+
+
+If everything is working, you should see:
+
+Server running on port 5000
+
+2. Make Sure You Have a Test User
+
+If you haven’t created a user yet, send this request using Thunder Client / Postman:
+
+POST
+
+http://localhost:5000/auth/signup
+
+
+JSON Body:
+
+{
+  "name": "TestUser",
+  "email": "testuser@example.com",
+  "password": "password123"
+}
+
+
+You should get:
+
+Signup successful
+
+
+Now you can sign in.
+
+3. Test Sign-In
+
+POST
+
+http://localhost:5000/auth/signin
+
+
+JSON Body:
+
+{
+  "email": "testuser@example.com",
+  "password": "password123"
+}
+
+
+You should get back a JWT token.
+This confirms login is working.
+
+4. While the backend is running pull up web browser and put:
+
+http://localhost:5000/audio/dreams.mp3
+
+into the url, an audio file should start playing.
+(could not use actual song for obvious reasons for now)
