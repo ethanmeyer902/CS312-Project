@@ -19,12 +19,18 @@ export const getSongById = (req, res) => {
 
 // ADD NEW SONG
 export const addSong = (req, res) => {
+    const { title, artist, album, audio_file_path } = req.body;
+
     const newSong = {
         id: songs.length + 1,
-        ...req.body
+        title,
+        artist,
+        album,
+        audio_file_path: audio_file_path || null
     };
 
     songs.push(newSong);
+
     res.status(201).json(newSong);
 };
 

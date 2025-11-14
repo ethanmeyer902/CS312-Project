@@ -14,6 +14,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use("/audio", express.static("uploads/audio"));
+
 // Routes
 app.use("/auth", authRoutes);
 app.use("/api/songs", songRoutes);
