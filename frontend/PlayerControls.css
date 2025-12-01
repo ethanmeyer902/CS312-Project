@@ -1,0 +1,15 @@
+.player-controls {
+  background: #111;
+  padding: 15px;
+  color: white;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.player-controls button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+}
