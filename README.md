@@ -62,3 +62,22 @@ http://localhost:5000/audio/dreams.mp3
 
 into the url, an audio file should start playing.
 (could not use actual song for obvious reasons for now)
+
+
+5. Start the Frontend (React + Vite)
+
+The frontend lives in the frontend folder and is a Vite + React app.
+
+From the project root:
+
+cd frontend
+npm install      # only needed the first time
+npm run dev
+
+
+Vite will start a dev server, usually at:
+
+http://localhost:5173/
+
+
+Open that URL in your browser to see the UI.
